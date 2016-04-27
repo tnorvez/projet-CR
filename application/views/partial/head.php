@@ -12,9 +12,10 @@
     <title>Project-CR</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css"/>
-    <link href="assets/css/signin.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/main.css"/>
+    <link href="<?php echo base_url();?>assets/css/signin.css" rel="stylesheet">
+    
    
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

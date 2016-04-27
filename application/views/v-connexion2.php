@@ -1,23 +1,27 @@
-
 <?php $this->load->view("partial/head");?>
-   <?php $this->load->view("partial/nav");?>
+<?php $this->load->view("partial/nav");?>
 
+ <?php
+ $this->load->helper('url');
+ $path = base_url();
+   ?>
 <div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
       <div class="jumbotron">
    
         
-        <form  class="form-signin" action=" ">
+        
+        <form  class="form-signin" method="POST" action="<?php  echo $path.'c_default/connecter';?>">
         <h2 class="form-signin-heading">Identifiez-vous !</h2>
-        <input  type="text" class="form-control" placeholder="Pseudo" autofocus>
-        <input  type="password" class="form-control" placeholder="Password">
+        <input  id="login" name="login" type="text" class="form-control" placeholder="Pseudo" autofocus>
+        <input id="mdp" name="mdp" type="password" class="form-control" placeholder="Password">
         
         <button  class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
       </form>
       
         <p>
-          <a class="btn btn-lg btn-primary" href=" " role="button">Accueil &raquo;</a>
+         <?php if (isset($erreur))	echo '<div class ="erreur"><ul><li>'.$erreur.'</li></ul></div>'; ?>
         </p>
       </div>
 
@@ -25,4 +29,4 @@
     
 
 
-<?php $this->load->view("partial/footer");;?>
+<?php $this->load->view("partial/footer");?>

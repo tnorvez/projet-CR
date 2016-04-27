@@ -1,6 +1,11 @@
 <?php $this->load->view("partial/head");?>
    <?php $this->load->view("partial/nav");?>
-
+   
+     <?php
+ $this->load->helper('url');
+ $path = base_url();
+   ?>
+   
  <div class="container">
 
       <!-- Main component for a primary marketing message or call to action -->
@@ -12,10 +17,10 @@ de la démarche de communication auprès des praticiens et donnera une vision in
 synthétique de l'activité de représentation.</p>
         
         <p>
-          <a class="btn btn-lg btn-primary" href=" " role="button">Connexion &raquo;</a>
+          
         </p>
+        
       </div>
       
-      
-    <?php $this->load->view("partial/footer");;?>
-      
+<?php $this->load->view("partial/footer");?>
+     
